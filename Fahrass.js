@@ -1,3 +1,4 @@
+
 // ---------------------------------------------------
 // BLOGTOC
 // ---------------------------------------------------
@@ -86,7 +87,7 @@ function loadtoc(json) {
             if (postcontent.length > numChars) {
                postcontent = postcontent.substring(0,numChars);
                var quoteEnd = postcontent.lastIndexOf(" ");
-               postcontent = postcontent.substring(0,quoteEnd) + '...';
+               postcontent = postcontent.substring(0,quoteEnd) + '';
             }
 
          // get the post labels from the entry
@@ -233,10 +234,10 @@ function displayToc(filter) {
    }
    tocTable += '</table>';
    if (numDisplayed == postTitle.length) {
-      var tocNote = '<span class="toc-note"> جميع الكتب' + postTitle.length + ' كاملة<br/></span>'; }
+      var tocNote = '<span class="toc-note"> تحتوي المكتبة على ' + postTitle.length + ' كتاب <br/></span>'; }
    else {
-      var tocNote = '<span class="toc-note">يوجد ' + numDisplayed + ' تحت تصنيف \'';
-      tocNote += postFilter + '\' من إجمالي '+ postTitle.length + '  عدد الكتب <br/></span>';
+      var tocNote = '<span class="toc-note"> يوجد من الكتب ' + numDisplayed + ' تحت تصنيف \'';
+      tocNote += postFilter + '\' من إجمالي '+ postTitle.length + '  كتاب <br/></span>';
    }
    tocdiv.innerHTML = tocNote + tocTable;
 } // end of displayToc
